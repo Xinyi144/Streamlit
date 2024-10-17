@@ -20,8 +20,8 @@ h1 {
 }
 
 .stButton>button {
-    background-color: #a371f5; /* Button background color */
-    color: white; /* Button text color */
+    background-color: #A8DADC; /* Button background color */
+    color: #080808; /* Button text color */
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -29,7 +29,7 @@ h1 {
 }
 
 .stButton>button:hover {
-    background-color: #8e5bc7;
+    background-color: #457B9D;
     color:#33046c;
 }
 
