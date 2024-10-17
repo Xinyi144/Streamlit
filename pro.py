@@ -52,10 +52,10 @@ dialogue_css = """
 </style>
 """
 
-client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
-genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
-#client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
-#genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+#client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
+#genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
+client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # Function to load custom CSS
 def load_css(file_name):
