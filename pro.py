@@ -361,14 +361,9 @@ elif selected == "Sleeping Monitor":
     # Submit button to run the function
     if st.button("Check Sleep"):
         if (uploaded_image is not None) and (baby_age > 0):
-            try:
                 # Use the generated description if an image is uploaded
-                result = baby_sleeping(baby_age, baby_sleeping_time, baby_pattern_description)
-    
-                # Display the result from the baby sleeping function
-                st.write(result)
-            except Exception as e:
-                st.write("An error occurred:", str(e))
+            result = baby_sleeping(baby_age, baby_sleeping_time, baby_pattern_description)
+            st.write(result)
         else:
             st.write("Please provide an image of the baby and their age.")
 
