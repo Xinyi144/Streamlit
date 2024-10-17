@@ -52,8 +52,10 @@ dialogue_css = """
 </style>
 """
 
-client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
-genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
+#client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
+#genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
+client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # Function to load custom CSS
 def load_css(file_name):
@@ -69,13 +71,14 @@ with st.sidebar:
         "Login", 
         "Baby Food Care", 
         "Home Safety", 
-        "Sleeping Monitor",
         "Voice Analysis", 
         "Parenting Tips", 
-        "Calendar Reminder"
+        "Calendar Reminder",
+        "Sleeping Monitor",
     ],
-    icons=["person-add", "person", "check-circle", "shield-lock", "moon", "mic", "lightbulb", "calendar"],  # Updated icons
+    icons=["person-add", "person", "check-circle", "shield-lock", "mic", "lightbulb", "calendar","moon",],  # Updated icons
     default_index=0)
+
 
 # SIGNUP PAGE--------------------------------------------------
 if selected == "Sign Up":
