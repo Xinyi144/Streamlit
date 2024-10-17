@@ -211,7 +211,7 @@ elif selected == "Baby Food Care":
                                                       'content': user_message
                                                   }],
                                                   temperature=1.0,
-                                                  max_tokens=200)
+                                                  max_tokens=300)
         return response.choices[0].message.content
 
     # Input type selection
